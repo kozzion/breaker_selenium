@@ -1,2 +1,6 @@
+breaker_selenium.egg-info/*
+*.json
 *.pyc
 *.cfg
+breaker_selenium/beversport/temp
+script/matrix_selected.pkl

@@ -5,14 +5,11 @@ import sys
 import os
 import pathlib
 
-
-
-sys.path.append('../')
 from breaker_core.common.tools_identity import ToolsIdentity
-from breaker_core.common.system_webdriver import SystemWebdriver
-from breaker_core.google.tab_manager_google import TabManagerGoogle
-from breaker_core.linkedin.tab_manager_linkedin import TabManagerLinkedin
-from breaker_core.builtin.jobitem import Jobitem
+from breaker_selenium.common.system_webdriver import SystemWebdriver
+from breaker_selenium.google.tab_manager_google import TabManagerGoogle
+from breaker_selenium.linkedin.tab_manager_linkedin import TabManagerLinkedin
+from breaker_selenium.builtin.jobitem import Jobitem
 
 
 with open('config.cfg', 'r') as file:

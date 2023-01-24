@@ -8,10 +8,9 @@ import pathlib
 
 
 sys.path.append('../')
-from bigbreaker.common.tools_identity import ToolsIdentity
-from bigbreaker.common.system_webdriver import SystemWebdriver
-from bigbreaker.builtin.tab_manager_builtin import TabManagerBuiltin
-from bigbreaker.builtin.jobitem import Jobitem
+from breaker_core.common.tools_identity import ToolsIdentity
+from breaker_selenium.builtin.tab_manager_builtin import TabManagerBuiltin
+from breaker_selenium.builtin.jobitem import Jobitem
 
 with open('config.cfg', 'r') as file:
     config = json.load(file)

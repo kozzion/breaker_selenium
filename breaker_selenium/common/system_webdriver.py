@@ -32,20 +32,20 @@ class SystemWebdriver(object):
         WebDriverWait(webdriver, timeout_s).until(EC.element_to_be_clickable((By.XPATH, xpath)))
 
         
-    @staticmethod
-    def await_is_present(webdriver, name_class, timeout_s=20, verbose=False):
-        list_element = webdriver.find_elements(By.CLASS_NAME, name_class)
-        for i in range(int(timeout_s/0.1)):
-            list_element = webdriver.find_elements(By.CLASS_NAME, name_class)
-            if 0 < len(list_element):
-                return True, list_element[0]
-                
 
+    @staticmethod
+    def await_is_present(source_element, by, argument, timeout_s=5, verbose=False):
+        list_element = source_element.find_elements(by, argument)
+        for i in range(int(timeout_s/0.1)):
+            list_element = source_element.find_elements(by, argument)
+            if 0 < len(list_element):
+                return True
+                
             time.sleep(0.1)
             if verbose:
                 print('sleep')
                 sys.stdout.flush()
-        return False, None
+        return False
 
     @staticmethod
     def find_elements_by_class_name_any(source_element, list_name_class):
